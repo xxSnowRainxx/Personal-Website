@@ -9,18 +9,7 @@ export default async function login(formData:FormData) {
       where user_name = ${user_name} AND user_pw = ${user_pw}
     `
     if (result.length == 0) {
-      await sql`
-      insert into users(user_name,user_pw)
-      values
-      (${user_name},${user_pw})
-      `
-      const newUserId  = await sql`
-      select user_id from users
-      where user_name = ${user_name} AND user_pw = ${user_pw}
-    `
-    const id = newUserId[0].user_id;
-      redirect(`/${id}/memo`);
-    
+      throw new Error("账号或密码错误");
     }
     else {
       const userid = result[0].user_id;
