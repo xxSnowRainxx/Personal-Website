@@ -16,7 +16,7 @@ export default async function Add({ params }: { params: Promise<{ userid: string
                 <input name='content' placeholder='请输入任务内容' className='w-2/5 h-1/12 border border-transparent focus:border-sky-300 outline-none rounded-xl px-4 py-2 focus:ring-2 focus:ring-sky-200 placeholder-gray-400'></input>
                 <div className='flex gap-4 px-4 mt-7 w-2/5 h-1/12'>
                     <div className='text-gray-400'>请选择截至日期:</div>
-                    <input type='date' name='between' placeholder='输入格式如2025-1-1的时间' className='w-2/5 h-1/12 mt-1 outline-none rounded-xl px-4 py-2'></input>
+                    <input type='date' name='deadline' placeholder='输入格式如2025-1-1的时间' className='w-2/5 h-1/12 mt-1 outline-none rounded-xl px-4 py-2'></input>
                 </div>
                 <div className='flex gap-4 px-4 w-2/5 h-1/12'>
                     <div className='text-gray-400 mt-5 mr-6'>选择任务类型: </div>
